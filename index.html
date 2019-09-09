@@ -42,9 +42,22 @@
         <label for = "hide">Hide all books</label>
 	    	<input type="text" placeholder="Add a book..." />
 	    	<button>Add</button>
-	    </form>
-
-    </div>
+		</form>
+	<div id="tabbed-content">
+		<ul class="tabs">
+			<li data-target="#about" class="active"></li>
+			<li data-target="#contact">Contact</li>
+		</ul>
+	<div class="panel active" id="about">
+		<p>Content for about tab...</p>
+		<p>Stuff Stuff Stuff</p>
+	</div>
+	<div class="panel" id="contact">
+		<p>Content for contact tab...</p>
+		<p>Stuff Stuff Stuff</p>
+	</div>
+	</div>
+	</div>
     <script src="app.js"></script>
   </body>
 </html>
