@@ -43,4 +43,3 @@ hideBox.addEventListener('change', function(e){
     list.getElementsByClassName.display = "initial";
   }
 });
-
