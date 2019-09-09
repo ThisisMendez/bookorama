@@ -32,7 +32,7 @@ addForm.addEventListener('submit', function (e){
   li.appenedChild(bookName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
-  //list.insertBefore(li, list.querySelector('li:first-child')); 
+});
 
 // hide books 
 const hideBox = document.querySelector('#hide'); 
