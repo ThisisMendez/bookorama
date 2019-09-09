@@ -1,3 +1,5 @@
+//Lesson 14 was done in console - (Removing Atributes)
+
 const list = document.querySelector('#book-list ul'); 
 const forms = document.forms; 
 
