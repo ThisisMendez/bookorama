@@ -1,4 +1,5 @@
 const list = document.querySelector('#book-list ul'); 
+const forms = document.forms; 
 
 // delete books 
 list.addEventListener('click', (e) => { 
@@ -8,17 +9,24 @@ list.addEventListener('click', (e) => {
   }
 }); 
 
-const forms = document.forms; 
-console.log(forms); 
-console.log(forms['add-book']); 
-
-Array.from(forms).forEach(function(form){
-  console.log(form); 
-});
-
+//add books
 const addForm = forms['add-book']; 
 addForm.addEventListener('submit', function (e){
-  e.preventDefault(); 
-  const value = addForm.querySelector('input[type="text"]').value;
-  console.log(value);
+  e.preventDefault();
+
+  // create elements 
+  const value = addForm.querySelector ('input[type="text"]').value;
+  const li = document.createElement('li');
+  const bookName = document.createElement('span'); 
+  const deleteBtn = document.createElement('span');
+
+  // add text content 
+  bookName.textcontent = value; 
+  deleteBtn.textContent = 'delete'; 
+
+  // append to Dom 
+  li.appenedChild(bookName);
+  li.appendChild(deleteBtn);
+  list.appendChild(li);
+  //list.insertBefore(li, list.querySelector('li:first-child')); 
 });
